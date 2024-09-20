@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Data Tamu</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">>
+
     <style>
         body {
             background-color: #f8f9fa;
@@ -65,7 +65,7 @@
 <body>
     <div class="container">
         <h1 class="text-center">Edit Data Tamu</h1>
-        <form action="{{ route('admin.update', $guest->id) }}" method="POST">
+        <form action="{{ route('admin.update', $guest->id) }}" method="POST" id="#form-edit">
             @csrf
             @method('PUT')
             <div class="mb-3">
@@ -87,21 +87,9 @@
             <button type="submit" class="btn btn-primary">Simpan</button>
         </form>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZpYXcVdpa49cDjPs"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
 
-    <script>
-        @if(session('success'))
-        Swal.fire({
-            icon: 'success',
-            title: 'Perubahan berhasil disimpan',
-            showConfirmButton: false,
-            timer: 1500
-        })
-        @endif
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>

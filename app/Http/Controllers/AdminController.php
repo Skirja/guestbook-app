@@ -63,6 +63,7 @@ class AdminController extends Controller
         $guest = BukuTamu::find($id);
         $guest->nama = $request->nama;
         $guest->email = $request->email;
+        $guest->telepon = $request->telepon;
         $guest->pesan = $request->pesan;
         $guest->save();
         return redirect()->route('admin.dashboard');
